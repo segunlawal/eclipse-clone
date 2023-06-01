@@ -1,9 +1,9 @@
 import React, { useRef, useLayoutEffect } from "react";
-import Scroller from "../sections/Scroller";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import One from "../sections/One";
 import Two from "../sections/Two";
+import Three from "../sections/Three";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -29,19 +29,19 @@ const Home = () => {
 
   return (
     <div ref={panelRef}>
-      <div className="description panel bg-blue-400">
+      <div className="description panel bg-[#ff4301]">
         <One />
       </div>
 
-      <section className="panel bg-[#fff]">
+      <section className="panel bg-[#eeeeee]">
         <Two />
       </section>
-      <section className="panel bg-purple-400">THREE</section>
+      <section className="static bg-orange-400">
+        <Three />
+      </section>
+      {/* <section className="panel bg-purple-400">THREE</section>
       <section className="panel bg-green-400">FOUR</section>
-      <section className="panel bg-red-400">FIVE</section>
-
-      <section className="static bg-orange-400">static content</section>
-
+      <section className="panel bg-red-400">FIVE</section> */}
       <section className="static bg-green-400">static content</section>
     </div>
   );
