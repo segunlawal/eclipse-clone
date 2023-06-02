@@ -14,7 +14,6 @@ const Three = () => {
       const boxes = self.selector(".box");
       boxes.forEach((box) => {
         gsap.to(box, {
-          //   x: 500,
           position: "relative",
           left: "46%",
           scrollTrigger: {
@@ -25,14 +24,14 @@ const Three = () => {
           },
         });
       });
-    }, main); // <- Scope!
+    }, main);
     return () => ctx.revert(); // <- Cleanup!
   }, []);
 
   return (
     <div className="text-black py-10">
       <Marquee pauseOnHover pauseOnClick speed={120} autoFill>
-        <div className="flex gap-5 font-black text-2xl ">
+        <div className="flex gap-5 font-black text-xl ">
           <p>DING LIREN</p>
           <BiCrown className="my-auto" />
           <p>MAGNUS CARLSEN</p>

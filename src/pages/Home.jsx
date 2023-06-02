@@ -24,7 +24,7 @@ const Home = () => {
           },
         });
       });
-    }, panelRef); // <- Scope!
+    }, panelRef);
     return () => ctx.revert(); // <- Cleanup!
   }, []);
 

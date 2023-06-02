@@ -10,6 +10,7 @@ import {
   FaChessPawn,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Reveal } from "../hooks/Reveal";
 
 const Four = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -60,6 +61,7 @@ const Four = () => {
   const [cardsArr, setCardsArr] = useState(theCards);
 
   const handleClick = (id) => {
+    // Card flipping
     const updatedCardsArr = cardsArr.map((card) => {
       if (card.id === id) {
         return {
@@ -73,6 +75,7 @@ const Four = () => {
   };
 
   const handleMouseEnter = (id) => {
+    // Card flipping
     const updatedCardsArr = cardsArr.map((card) => {
       if (card.id === id) {
         return {
@@ -87,11 +90,11 @@ const Four = () => {
 
   const cardVariants = {
     animate: {
-      opacity: [0.98, 1, 0.98], // Animate between 0.99 and 1
+      opacity: [0.98, 1, 0.98],
       transition: {
-        duration: 1, // Duration of the animation
-        repeat: Infinity, // Repeat the animation infinitely
-        repeatType: "reverse", // Reverse the animation on each repeat
+        duration: 1,
+        repeat: Infinity,
+        repeatType: "reverse",
         type: "tween",
       },
     },
@@ -101,8 +104,9 @@ const Four = () => {
     const Icon = card.icon;
     return (
       <motion.div
-        variants={cardVariants} // Apply animation variants
-        animate="animate" // Start the animation
+        key={card.id}
+        variants={cardVariants}
+        animate="animate"
         className={`w-40 h-40 rounded-lg flex justify-center items-center ${
           card.isFlipped ? "bg-[#769656]" : "bg-[#eeeed2]"
         }`}
@@ -125,7 +129,11 @@ const Four = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="grid sm:grid-cols-3 grid-cols-2 gap-5 py-10">{cards}</div>
+      <Reveal>
+        <div className="grid sm:grid-cols-3 grid-cols-2 gap-5 py-10">
+          {cards}
+        </div>
+      </Reveal>
     </div>
   );
 };

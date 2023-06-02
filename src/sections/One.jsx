@@ -1,8 +1,7 @@
 import React from "react";
-import { ReactComponent as Eclipse } from "../assets/eclipse.svg";
+import { ReactComponent as Eclipse } from "../assets/chess.svg";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
 
 const One = () => {
   return (
@@ -20,11 +19,8 @@ const One = () => {
         >
           <Logo className="sm:w-20 w-10 cursor-pointer" />
         </motion.div>
-        {/* <div>
-          <Navbar />
-        </div> */}
       </div>
-      <div className="mt-[15rem]">
+      <div className="sm:mt-[15rem] mt-[30rem]">
         <Eclipse />
       </div>
     </div>
