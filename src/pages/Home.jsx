@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import One from "../sections/One";
 import Two from "../sections/Two";
 import Three from "../sections/Three";
+import Four from "../sections/Four";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -36,13 +37,32 @@ const Home = () => {
       <section className="panel bg-[#eeeeee]">
         <Two />
       </section>
-      <section className="static bg-orange-400">
+
+      <section className=" bg-[#ff4301]">
         <Three />
       </section>
-      {/* <section className="panel bg-purple-400">THREE</section>
-      <section className="panel bg-green-400">FOUR</section>
-      <section className="panel bg-red-400">FIVE</section> */}
-      <section className="static bg-green-400">static content</section>
+
+      <section className="bg-[#312e2b]">
+        <Four />
+      </section>
+      <footer className="text-center text-xs">
+        Design inspiration from{" "}
+        <a
+          href="https://www.eclipse.builders/"
+          target="__blank"
+          className="text-[#ff4301]"
+        >
+          eclipse.builders{" "}
+        </a>
+        and{" "}
+        <a
+          href="https://eat-curious.com/"
+          target="__blank"
+          className="text-[#042F1A]"
+        >
+          eat-curious.com
+        </a>
+      </footer>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
-import { BsCloudMoon } from "react-icons/bs";
+import { BiCrown } from "react-icons/bi";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,7 +14,9 @@ const Three = () => {
       const boxes = self.selector(".box");
       boxes.forEach((box) => {
         gsap.to(box, {
-          x: 350,
+          //   x: 500,
+          position: "relative",
+          left: "46%",
           scrollTrigger: {
             trigger: box,
             start: "bottom bottom",
@@ -28,26 +30,31 @@ const Three = () => {
   }, []);
 
   return (
-    <div>
+    <div className="text-black py-10">
       <Marquee pauseOnHover pauseOnClick speed={120} autoFill>
-        <div className="flex gap-5 font-black text-2xl text-[#042F1A]">
-          <p>DAIRY FREE</p>
-          <BsCloudMoon />
-          <p>MIND BLOWING</p>
-          <BsCloudMoon />
-          <p>100% PLANT BASED</p>
-          <BsCloudMoon />
-          <p>SPINE TINGLING</p>
-          <BsCloudMoon className="mr-5" />
+        <div className="flex gap-5 font-black text-2xl ">
+          <p>DING LIREN</p>
+          <BiCrown className="my-auto" />
+          <p>MAGNUS CARLSEN</p>
+          <BiCrown className="my-auto" />
+          <p>VISWANATHAN ANAND</p>
+          <BiCrown className="my-auto" />
+          <p>VLADIMIR KRAMNIK</p>
+          <BiCrown className="my-auto" />
+          <p>GARRY KASPAROV</p>
+          <BiCrown className="mr-5 my-auto" />
         </div>
       </Marquee>
-      <p className="text-center ">Set building blocks for the future</p>
-      <div className="section flex-center column" ref={main}>
-        <div className="box bg-green-500">box</div>
-        <div className="box bg-green-500">box</div>
-        <div className="box bg-green-500">box</div>
-        <div className="box bg-green-500">box</div>
-        <div className="box bg-green-500">box</div>
+      <p className="text-center py-5 sm:text-3xl text-xl font-bold">
+        PRINCIPLES AND BUILDING BLOCKS
+      </p>
+      <div className=" text-[#eeeeee]" ref={main}>
+        <div className="box bg-[#312e2b]">OPENING</div>
+        <div className="box bg-[#312e2b]">DEVELOPMENT</div>
+        <div className="box bg-[#312e2b]">POSITIONAL PLAY</div>
+        <div className="box bg-[#312e2b]">MIDDLE GAME</div>
+        <div className="box bg-[#312e2b]">TACTICS</div>
+        <div className="box bg-[#312e2b]">END GAME</div>
       </div>
       <section className="section"></section>
     </div>
