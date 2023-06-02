@@ -45,7 +45,7 @@ const Three = () => {
         </div>
       </Marquee>
       <p className="text-center py-5 sm:text-3xl text-xl font-bold">
-        PRINCIPLES AND BUILDING BLOCKS
+        Principles & Building Blocks
       </p>
       <div className=" text-[#eeeeee]" ref={main}>
         <div className="box bg-[#312e2b]">OPENING</div>

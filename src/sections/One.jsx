@@ -20,7 +20,7 @@ const One = () => {
           <Logo className="sm:w-20 w-10 cursor-pointer" />
         </motion.div>
       </div>
-      <div className="sm:mt-[15rem] mt-[30rem]">
+      <div className="mt-[15rem]">
         <Eclipse />
       </div>
     </div>

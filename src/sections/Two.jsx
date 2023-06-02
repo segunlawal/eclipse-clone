@@ -103,7 +103,7 @@ const Two = () => {
   };
 
   return (
-    <div className="md:-mt-0 -mt-[15vh] lg:text-6xl sm:text-[2.5rem] text-3xl text-left text-black  pt-5 pl-5 font-medium tracking-tighter">
+    <div className="md:-mt-0 -mt-[15vh] lg:text-6xl sm:text-[2.5rem] text-2xl text-left text-black  pt-5 pl-5 font-medium tracking-tighter">
       <p>Chess is an</p>
       <div className="flex text-[#ff4301]">
         <p>intellectual ballet</p>
@@ -115,9 +115,8 @@ const Two = () => {
 
       <div className="absolute bottom-5 sm:grid grid-cols-2 ">
         <p className="text-xl tracking-tight text-[#ff4301] px-2">
-          Chess, the ultimate battle of wits, intellect, strategy, and
-          creativity. It challenges the mind, nurtures creativity, and unveils
-          the beauty of complexity.
+          Chess is the ultimate battle of wits, intellect, strategy, and
+          creativity.
         </p>
         <div className="flex justify-end ">
           <motion.div
